@@ -5,6 +5,7 @@
     font-family: 'Source Sans Pro', sans-serif;
    
 }
+
 .h{
    border-bottom-right-radius: 0;
    
@@ -14,5 +15,6 @@ table{
     border-spacing: 0 1rem;
 }
 tr{
-    border: 2px solid black;
+    border: 2px solid #000000;
+    
 }

@@ -10,7 +10,9 @@ module.exports = {
         "custom-pink-light":'#edbabc',
         "custom-pink3":'#fec9c3',
         "custom-Orange":'#cd2c6c',
-        "custom-yellow":'#c2649a',"custom-green":'#d6bbe7',"pin":'#c2649a'
+        "custom-yellow":'#c2649a',"custom-green":'#d6bbe7',"pin":'#c2649a',
+        "custom-purple":'#9701A9'
+        
       },
       maxHeight: {
         '128': '60%',

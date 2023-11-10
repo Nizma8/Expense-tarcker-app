@@ -62,12 +62,31 @@ export const UpdateExpense = async(id,updatedExpenseDet)=>{
 
 // update total income
 
-export const updateTotalIncome = async (income)=>{
-  return await commonapi("POST",`${base_url}/totalIncome`,income)
-}
 
 // get total income
 
 export const getTotalIncome = async ()=>{
   return await commonapi("GET",`${base_url}/totalIncome`)
+}
+//  UploadIncome
+export const uploadIncome = async (money)=>{
+  return await commonapi("POST",`${base_url}/totalIncome`,money)
+}
+// get income
+export const getIncomeDetails = async ()=>{
+  return await commonapi("GET",`${base_url}/totalIncome`,"")
+}
+// delete income
+
+export const deleteIncome = async(id)=>{
+  return await commonapi("DELETE",`${base_url}/totalIncome/${id}`,{})
+}
+//edit income
+
+export const editIncome = async (id,inc)=>{
+  return await commonapi("PUT",`${base_url}/totalIncome/${id}`,inc)
+}
+//get single income
+export const singleIncomeDetails = async (id)=>{
+  return await commonapi("GET",`${base_url}/totalIncome/${id}`,"")
 }

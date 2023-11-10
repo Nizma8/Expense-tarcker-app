@@ -5,7 +5,7 @@ import Side from './Components/Side';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-neutral-200 h-screen">
       <Header></Header>
       <div className='flex justify-between'>
         <Side/>

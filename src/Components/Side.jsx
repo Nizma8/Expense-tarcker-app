@@ -21,37 +21,37 @@ function Side() {
   const arr = sideBar.slice(-2);
   return (
     <div
-      className="   flex-col min-w-fit "
-      style={{ width: "5%", height: "calc(100vh - 3rem)" }}
+      className="flex-col min-w-fit  rounded-r-lg" 
+      style={{ width: "5%" ,backgroundColor:'#9701A9'}}
     >
-      <div className="border border-b-0  rounded-r-lg bg-custom-pink h h-3/5">
+      
         <ul className="pt-40 pl-5 sm:pr-6">
           {array.map((item, index) => {
             return (
               <li
                 key={index}
-                className="text-2xl mb-4   w-100 text-white cursor-pointer hover:text-custom-pink1"
+                className="text-2xl mb-4   w-100 text-white font-thin cursor-pointer "
               >
                 {item}
               </li>
             );
           })}
         </ul>
-      </div>
-      <div className="bg-custom-pink h-2/5">
+      
+      
         <ul className="pt-20 pl-5">
           {arr.map((item, index) => {
             return (
               <li
                 key={index}
-                className="text-2xl mb-4   w-100 text-white hover:text-custom-pink1 cursor-pointer"
+                className="text-2xl mb-4  text-white w-100 cursor-pointer"
               >
                 {item}
               </li>
             );
           })}
         </ul>
-      </div>
+      
     </div>
   );
 }

@@ -34,6 +34,7 @@ function Category() {
       setOpenPannel(i)
     }
   }
+  
 
 
 
@@ -129,11 +130,11 @@ const removeCategory= async(id) =>{
   };
 
   return (
-    <div className=" bg-neutral-100 w-full h-full">
-      <div className="flex justify-between pt-3 px-3">
-        <h2 className="   text-2xl ">Category</h2>
+    <div className=" w-full h-full bg-white rounded-md mt-16 ">
+      <div className="flex justify-between pt-3 px-3  ">
+        <h2 className="   text-2xl font-bold " style={{fontFamily:'Roboto ,sans'}}>Category</h2>
         <Button
-          style={{ backgroundColor: "#FC5A96", color: "white" }}
+          style={{ backgroundColor: "#9701A9", color: "white" }}
           onClick={handleClickOpen}
         >
           {" "}
@@ -142,14 +143,14 @@ const removeCategory= async(id) =>{
       </div>
      
         
-        <div className="grid md:grid-cols-1  xl:grid-cols-1 gap-4 pl-20 mt-3 pr-4 pb-4 text-center overflow-y-auto h-4/5 ">
+        <div className="grid md:grid-cols-1  xl:grid-cols-1 gap-4 pl-20 mt-3 pr-4 pb-4 text-center overflow-y-auto h-4/5  ">
           {dataFromResponse?.length > 0 ? (
-            dataFromResponse.map((item) => {
+            dataFromResponse?.map((item) => {
               return (
                 <div className="flex-col   ">
                   <Card
                     key={item.id}
-                    style={{ backgroundColor: "#f7a9a8",paddingTop:'45px' ,paddingBottom:'40px'}}
+                    style={{  borderColor: '#9701A9', borderWidth: '2px', borderStyle: 'solid',paddingTop:'45px' ,paddingBottom:'40px'}}
                     sx={{
                       width: 244,
                       height: 44,
@@ -211,7 +212,7 @@ const removeCategory= async(id) =>{
                       return(
                         <Card key={categ.id}
                    
-                    style={{ backgroundColor: "",paddingTop:'40px' ,paddingBottom:'30px'}}
+                    style={{ backgroundColor: "#000000",paddingTop:'40px' ,paddingBottom:'30px'}}
                     sx={{
                       width: 144,
                       height: 144,
@@ -220,6 +221,8 @@ const removeCategory= async(id) =>{
                       justifyContent: "center",
                       alignItems: "center",
                       cursor: "pointer",
+                      color:'white',
+                      border:'3px solid #9701A9'
                       
                     }}
                     
