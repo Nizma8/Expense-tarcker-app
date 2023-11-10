@@ -1,1 +1,1 @@
-export const base_url ="http://localhost:4000"
+export const base_url ="https://expense-tracket-json-server.onrender.com"
