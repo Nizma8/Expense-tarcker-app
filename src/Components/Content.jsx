@@ -50,20 +50,18 @@ function Content() {
 
   }
 
-  
-
-
   const startDragg = (e, id) => {
     e.dataTransfer.setData("TableId", id);
+console.log("inside dragg function",id);
   };
+  
+
   const expenseSingleDetails = async (id) => {
     const { data } = await getSingleExpenseDetails(id);
     setSingleExpense(data);
   };
 
   
-
-
   const editExpense = async (id) => {
      await UpdateExpense(id, singleExpense);
     getAllExpense()
@@ -81,7 +79,7 @@ function Content() {
   }, [onAddExpense]);
 useEffect(()=>{
   ;getIncomeDet();
-},[,onAddIncome])
+},[onAddIncome])
   return (
     <div
       className="h-screen flex justify-between flex-col md:flex-row md:space-x-4  "
@@ -94,10 +92,12 @@ useEffect(()=>{
         <div className="outlet">
         {activeTab=== "tab1" ? <TableExpense
             getExpense={getExpense}
+            getAllExpense={getAllExpense}
             startDragg={startDragg}
             expenseSingleDetails={expenseSingleDetails}
             deleteExpense={deleteExpense}
             singleExpense={singleExpense} setSingleExpense={setSingleExpense} editExpense={editExpense} 
+            setGEtExpense={setGEtExpense}
           />: <AddIncome getIncome={getIncome}  removeIncome={ removeIncome}  updateIncome ={ updateIncome }  singleIncome={singleIncome} setSingleIncome={setSingleIncome}/>
         }
          

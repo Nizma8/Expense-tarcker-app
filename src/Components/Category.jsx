@@ -114,9 +114,7 @@ const removeCategory= async(id) =>{
      await deleteCategories(id)
 }
   const videoDrop = async (e, categoryId) => {
-    console.log("categoryId:", categoryId);
     const tableId = e.dataTransfer.getData("TableId");
-    console.log("tableID:", tableId);
 
     //get sleceted table details
     const { data } = await getSingleExpenseDetails(tableId);

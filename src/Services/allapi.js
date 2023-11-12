@@ -90,3 +90,9 @@ export const editIncome = async (id,inc)=>{
 export const singleIncomeDetails = async (id)=>{
   return await commonapi("GET",`${base_url}/totalIncome/${id}`,"")
 }
+// to get swapped expense and store permenantly
+
+// export const SwappedExpenseDetails = async ( body) => {
+//   return await commonapi("POST", `${base_url}/totalExpense`, body);
+// };
+
